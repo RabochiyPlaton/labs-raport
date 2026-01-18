@@ -1,6 +1,13 @@
-.idea
+# IntelliJ IDEA
+.idea/
 *.iml
+
+# Compiled files
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kotlin (если вдруг появится)
+.kotlin/
