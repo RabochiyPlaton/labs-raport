@@ -1,0 +1,139 @@
+package labotory_12.mendeleev2;
+
+import labotory_12.mendeleev1.Element;
+
+public class AutomaticTable {
+
+    public Element[] auto() {
+        Element elements[] = new Element[118];
+        elements[0] = new Element(1, "Водород", "H", "газ", 1.008);
+        elements[1] = new Element(2, "Гелий", "He", "газ", 4.0026);
+        elements[2] = new Element(3, "Литий", "Li", "твёрдый", 6.94);
+        elements[3] = new Element(4, "Бериллий", "Be", "твёрдый", 9.0122);
+        elements[4] = new Element(5, "Бор", "B", "твёрдый", 10.81);
+        elements[5] = new Element(6, "Углерод", "C", "твёрдый", 12.011);
+        elements[6] = new Element(7, "Азот", "N", "газ", 14.007);
+        elements[7] = new Element(8, "Кислород", "O", "газ", 15.999);
+        elements[8] = new Element(9, "Фтор", "F", "газ", 18.998);
+        elements[9] = new Element(10, "Неон", "Ne", "газ", 20.180);
+
+        elements[10] = new Element(11, "Натрий", "Na", "твёрдый", 22.990);
+        elements[11] = new Element(12, "Магний", "Mg", "твёрдый", 24.305);
+        elements[12] = new Element(13, "Алюминий", "Al", "твёрдый", 26.982);
+        elements[13] = new Element(14, "Кремний", "Si", "твёрдый", 28.085);
+        elements[14] = new Element(15, "Фосфор", "P", "твёрдый", 30.974);
+        elements[15] = new Element(16, "Сера", "S", "твёрдый", 32.06);
+        elements[16] = new Element(17, "Хлор", "Cl", "газ", 35.45);
+        elements[17] = new Element(18, "Аргон", "Ar", "газ", 39.948);
+        elements[18] = new Element(19, "Калий", "K", "твёрдый", 39.098);
+        elements[19] = new Element(20, "Кальций", "Ca", "твёрдый", 40.078);
+
+        elements[20] = new Element(21, "Скандий", "Sc", "твёрдый", 44.956);
+        elements[21] = new Element(22, "Титан", "Ti", "твёрдый", 47.867);
+        elements[22] = new Element(23, "Ванадий", "V", "твёрдый", 50.942);
+        elements[23] = new Element(24, "Хром", "Cr", "твёрдый", 51.996);
+        elements[24] = new Element(25, "Марганец", "Mn", "твёрдый", 54.938);
+        elements[25] = new Element(26, "Железо", "Fe", "твёрдый", 55.845);
+        elements[26] = new Element(27, "Кобальт", "Co", "твёрдый", 58.933);
+        elements[27] = new Element(28, "Никель", "Ni", "твёрдый", 58.693);
+        elements[28] = new Element(29, "Медь", "Cu", "твёрдый", 63.546);
+        elements[29] = new Element(30, "Цинк", "Zn", "твёрдый", 65.38);
+
+        elements[30] = new Element(31, "Галлий", "Ga", "твёрдый", 69.723);
+        elements[31] = new Element(32, "Германий", "Ge", "твёрдый", 72.630);
+        elements[32] = new Element(33, "Мышьяк", "As", "твёрдый", 74.922);
+        elements[33] = new Element(34, "Селен", "Se", "твёрдый", 78.971);
+        elements[34] = new Element(35, "Бром", "Br", "жидкий", 79.904);
+        elements[35] = new Element(36, "Криптон", "Kr", "газ", 83.798);
+        elements[36] = new Element(37, "Рубидий", "Rb", "твёрдый", 85.468);
+        elements[37] = new Element(38, "Стронций", "Sr", "твёрдый", 87.62);
+        elements[38] = new Element(39, "Иттрий", "Y", "твёрдый", 88.906);
+        elements[39] = new Element(40, "Цирконий", "Zr", "твёрдый", 91.224);
+
+        elements[40] = new Element(41, "Ниобий", "Nb", "твёрдый", 92.906);
+        elements[41] = new Element(42, "Молибден", "Mo", "твёрдый", 95.95);
+        elements[42] = new Element(43, "Технеций", "Tc", "твёрдый", 98.0);
+        elements[43] = new Element(44, "Рутений", "Ru", "твёрдый", 101.07);
+        elements[44] = new Element(45, "Родий", "Rh", "твёрдый", 102.91);
+        elements[45] = new Element(46, "Палладий", "Pd", "твёрдый", 106.42);
+        elements[46] = new Element(47, "Серебро", "Ag", "твёрдый", 107.87);
+        elements[47] = new Element(48, "Кадмий", "Cd", "твёрдый", 112.41);
+        elements[48] = new Element(49, "Индий", "In", "твёрдый", 114.82);
+        elements[49] = new Element(50, "Олово", "Sn", "твёрдый", 118.71);
+
+        elements[50] = new Element(51, "Сурьма", "Sb", "твёрдый", 121.76);
+        elements[51] = new Element(52, "Теллур", "Te", "твёрдый", 127.60);
+        elements[52] = new Element(53, "Иод", "I", "твёрдый", 126.90);
+        elements[53] = new Element(54, "Ксенон", "Xe", "газ", 131.29);
+        elements[54] = new Element(55, "Цезий", "Cs", "твёрдый", 132.91);
+        elements[55] = new Element(56, "Барий", "Ba", "твёрдый", 137.33);
+        elements[56] = new Element(57, "Лантан", "La", "твёрдый", 138.91);
+        elements[57] = new Element(58, "Церий", "Ce", "твёрдый", 140.12);
+        elements[58] = new Element(59, "Празеодим", "Pr", "твёрдый", 140.91);
+        elements[59] = new Element(60, "Неодим", "Nd", "твёрдый", 144.24);
+
+        elements[60] = new Element(61, "Прометий", "Pm", "твёрдый", 145.0);
+        elements[61] = new Element(62, "Самарий", "Sm", "твёрдый", 150.36);
+        elements[62] = new Element(63, "Европий", "Eu", "твёрдый", 151.96);
+        elements[63] = new Element(64, "Гадолиний", "Gd", "твёрдый", 157.25);
+        elements[64] = new Element(65, "Тербий", "Tb", "твёрдый", 158.93);
+        elements[65] = new Element(66, "Диспрозий", "Dy", "твёрдый", 162.50);
+        elements[66] = new Element(67, "Гольмий", "Ho", "твёрдый", 164.93);
+        elements[67] = new Element(68, "Эрбий", "Er", "твёрдый", 167.26);
+        elements[68] = new Element(69, "Тулий", "Tm", "твёрдый", 168.93);
+        elements[69] = new Element(70, "Иттербий", "Yb", "твёрдый", 173.05);
+
+        elements[70] = new Element(71, "Лютеций", "Lu", "твёрдый", 174.97);
+        elements[71] = new Element(72, "Гафний", "Hf", "твёрдый", 178.49);
+        elements[72] = new Element(73, "Тантал", "Ta", "твёрдый", 180.95);
+        elements[73] = new Element(74, "Вольфрам", "W", "твёрдый", 183.84);
+        elements[74] = new Element(75, "Рений", "Re", "твёрдый", 186.21);
+        elements[75] = new Element(76, "Осмий", "Os", "твёрдый", 190.23);
+        elements[76] = new Element(77, "Иридий", "Ir", "твёрдый", 192.22);
+        elements[77] = new Element(78, "Платина", "Pt", "твёрдый", 195.08);
+        elements[78] = new Element(79, "Золото", "Au", "твёрдый", 196.97);
+        elements[79] = new Element(80, "Ртуть", "Hg", "жидкий", 200.59);
+
+        elements[80] = new Element(81, "Таллий", "Tl", "твёрдый", 204.38);
+        elements[81] = new Element(82, "Свинец", "Pb", "твёрдый", 207.2);
+        elements[82] = new Element(83, "Висмут", "Bi", "твёрдый", 208.98);
+        elements[83] = new Element(84, "Полоний", "Po", "твёрдый", 209.0);
+        elements[84] = new Element(85, "Астат", "At", "твёрдый", 210.0);
+        elements[85] = new Element(86, "Радон", "Rn", "газ", 222.0);
+        elements[86] = new Element(87, "Франций", "Fr", "твёрдый", 223.0);
+        elements[87] = new Element(88, "Радий", "Ra", "твёрдый", 226.0);
+        elements[88] = new Element(89, "Актиний", "Ac", "твёрдый", 227.0);
+        elements[89] = new Element(90, "Торий", "Th", "твёрдый", 232.04);
+
+        elements[90] = new Element(91, "Протактиний", "Pa", "твёрдый", 231.04);
+        elements[91] = new Element(92, "Уран", "U", "твёрдый", 238.03);
+        elements[92] = new Element(93, "Нептуний", "Np", "твёрдый", 237.0);
+        elements[93] = new Element(94, "Плутоний", "Pu", "твёрдый", 244.0);
+        elements[94] = new Element(95, "Америций", "Am", "твёрдый", 243.0);
+        elements[95] = new Element(96, "Кюрий", "Cm", "твёрдый", 247.0);
+        elements[96] = new Element(97, "Берклий", "Bk", "твёрдый", 247.0);
+        elements[97] = new Element(98, "Калифорний", "Cf", "твёрдый", 251.0);
+        elements[98] = new Element(99, "Эйнштейний", "Es", "твёрдый", 252.0);
+        elements[99] = new Element(100, "Фермий", "Fm", "твёрдый", 257.0);
+
+        elements[100] = new Element(101, "Менделевий", "Md", "твёрдый", 258.0);
+        elements[101] = new Element(102, "Нобелий", "No", "твёрдый", 259.0);
+        elements[102] = new Element(103, "Лоуренсий", "Lr", "твёрдый", 262.0);
+        elements[103] = new Element(104, "Резерфордий", "Rf", "твёрдый", 267.0);
+        elements[104] = new Element(105, "Дубний", "Db", "твёрдый", 270.0);
+        elements[105] = new Element(106, "Сиборгий", "Sg", "твёрдый", 271.0);
+        elements[106] = new Element(107, "Борий", "Bh", "твёрдый", 270.0);
+        elements[107] = new Element(108, "Хассий", "Hs", "твёрдый", 277.0);
+        elements[108] = new Element(109, "Мейтнерий", "Mt", "неизвестный", 276.0);
+        elements[109] = new Element(110, "Дармштадтий", "Ds", "неизвестный", 281.0);
+        elements[110] = new Element(111, "Рентгений", "Rg", "неизвестный", 280.0);
+        elements[111] = new Element(112, "Коперниций", "Cn", "неизвестный", 285.0);
+        elements[112] = new Element(113, "Нихоний", "Nh", "неизвестный", 286.0);
+        elements[113] = new Element(114, "Флеровий", "Fl", "неизвестный", 289.0);
+        elements[114] = new Element(115, "Московий", "Mc", "неизвестный", 290.0);
+        elements[115] = new Element(116, "Ливерморий", "Lv", "неизвестный", 293.0);
+        elements[116] = new Element(117, "Теннессин", "Ts", "неизвестный", 294.0);
+        elements[117] = new Element(118, "Оганесон", "Og", "неизвестный", 294.0);
+        return elements;
+    }
+}
