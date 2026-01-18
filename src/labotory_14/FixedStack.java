@@ -4,22 +4,17 @@ public class FixedStack extends AbstractQueue {
 
     FixedStack(int size) {
         super(size);
-        rear = size;
-    }
-
-    @Override
-    public void reset() {
-        super.reset();
-        rear = queue.length;
+        rear = 0;
     }
 
     @Override
     public void put(char ch) {
         if (front == queue.length) {
-            System.out.print(" Очередь заполнена");
+            System.out.println("Очередь заполнена");
             return;
         }
         queue[front++] = ch;
+        rear = front;
     }
 
     @Override

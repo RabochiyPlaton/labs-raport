@@ -4,21 +4,15 @@ abstract class AbstractQueue implements Och {
 
     protected char[] queue;
     protected int front, rear;
+    protected int count;
 
     AbstractQueue(int size) {
-        front = rear = 0;
+        front = rear = count = 0;
         queue = new char[size];
     }
 
     public char[] getQueue() {
         return queue;
-    }
-
-    @Override
-    public void print() {
-        for (int i = 0; i < queue.length; i++) {
-            System.out.print(queue[i] + " ");
-        }
     }
 
     @Override

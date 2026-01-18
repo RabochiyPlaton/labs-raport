@@ -1,17 +1,10 @@
 package labotory_14;
 
 public class DynamicCircularQueue extends AbstractQueue {
-    private int count;
 
     DynamicCircularQueue(int size) {
         super(size);
         count = 0;
-    }
-
-    @Override
-    public void reset() {
-        front = rear = count = 0;
-        queue = new char[queue.length];
     }
 
     @Override

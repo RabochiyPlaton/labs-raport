@@ -25,7 +25,7 @@ public class Main {
         char chPut, ch;
         int choice, size2;
         while (true) {
-            System.out.println("\n1 - добавить элементы\n2 - извлечь элементы\n3 - сбросить очередь\n4 - вывод очереди как массива\n5 - выход");
+            System.out.println("\n1 - добавить элементы\n2 - извлечь элементы\n3 - сбросить очередь\n4 - выход");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -46,20 +46,19 @@ public class Main {
                     System.out.println("Сколько символов надо извлечь?");
                     size2 = scanner.nextInt();
                     if (size2 > och.getLength()) size2 = och.getLength();
-                    System.out.print("Состав очереди q1: \n");
+                    System.out.print("Состав очереди : \n");
+                    System.out.print("[ ");
                     for (int i = 0; i < size2; i++) {
                         ch = och.get();
                         System.out.print(ch + " ");
                     }
+                    System.out.print("]");
                     break;
                 case 3:
                     System.out.println("\nСброс очереди...");
                     och.reset();
                     break;
                 case 4:
-                    och.print();
-                    break;
-                case 5:
                     return;
                 default:
                     System.out.println("Нет такого варианта");
@@ -90,8 +89,9 @@ public class Main {
                 case 2:
                     return new CircularStack(length);
                 case 3:
-                case 4:
                     return new DynamicStack(length);
+                case 4:
+                    return new DynamicCircularStack(length);
                 default:
                     System.out.println("Нет такого варианта, повторите попытку");
             }

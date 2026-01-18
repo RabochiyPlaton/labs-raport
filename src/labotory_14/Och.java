@@ -9,8 +9,6 @@ interface Och {
 
     void reset();
 
-    void print();
-
     char[] getQueue();
 
 }
