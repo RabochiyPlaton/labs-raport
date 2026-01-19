@@ -2,7 +2,6 @@ package labotory_11.vehicle;
 
 import labotory_11.input.Input;
 
-
 abstract public class Vehicle {
 
     protected final int consumption;

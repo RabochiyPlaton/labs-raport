@@ -38,7 +38,7 @@ public class Car extends Vehicle {
     void menu(Input input) {
         while (true) {
             System.out.println("\n1 - информация\n2 - Посигналить\n3 - Ехать\n4 - Заправиться\n5 - Взять пассажира\n6 - Высадить пассажира\n7 - Выход\n");
-            int inp = (int) input.input();
+            int inp = (int) input.inputPositiveNumber();
             switch (inp) {
                 case 1:
                     System.out.println(this);

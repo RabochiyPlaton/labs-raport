@@ -15,7 +15,7 @@ public class Truck extends Vehicle {
 
     public void takeGoods(Input input) {
         System.out.println("Сколько товара загрузить? Текущее количество: " + goods + "/" + volume);
-        int quantity = (int) input.input();
+        int quantity = (int) input.inputPositiveNumber();
         if (goods + quantity > volume) {
             System.out.println("Столько не влезет");
         } else {
@@ -30,7 +30,7 @@ public class Truck extends Vehicle {
             return;
         }
         System.out.println("Сколько товара выгрузить? Текущее количество: " + goods + "/" + volume);
-        int amount = (int) input.input();
+        int amount = (int) input.inputPositiveNumber();
         if (amount > goods) {
             System.out.println("Нельзя выгрузить больше, чем есть. Выгружено всё.");
             goods = 0;
@@ -50,7 +50,7 @@ public class Truck extends Vehicle {
     void menu(Input input) {
         while (true) {
             System.out.println("\n1 - информация\n2 - Посигналить\n3 - Ехать\n4 - Заправиться\n5 - Загрузить товары\n6 - Выгрузить товары\n7 - Выход\n");
-            int inp = (int) input.input();
+            int inp = (int) input.inputPositiveNumber();
             switch (inp) {
                 case 1:
                     System.out.println(this);

@@ -1,16 +1,14 @@
 package labotory_15.Nums;
 
-import java.util.Scanner;
-import java.util.InputMismatchException;
+import labotory_15.Input;
 
 public class Factorial {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public void factorial(Input input) {
         int n;
         while (true) {
-            System.out.print("Введите положительное число: ");
             try {
-                n = scanner.nextInt();
+                System.out.print("Введите положительное число: ");
+                n = (int) input.inputPositiveNumber();
                 if (n < 0) {
                     throw new NegativeNumberException("Число должно быть положительное");
                 }
@@ -23,11 +21,10 @@ public class Factorial {
                 }
                 System.out.println("Факториал числа " + n + " = " + fact);
                 break;
-            } catch (InputMismatchException ex) {
-                System.out.println("\u001B[33mВведите  число\u001B[0m");
-            } catch (NegativeNumberException | FactorialOverflowException ex) {
+            }catch (FactorialOverflowException ex) {
                 System.out.println(ex.getMessage());
             }
+
         }
     }
 }

@@ -50,7 +50,7 @@ public class Quadrangle {
         diagonalMax = Math.min(diagonalMax1, diagonalMax2);
         while (true) {
             System.out.printf("Введите диагональ (возможной диапазон: %.3f < %.3f)", diagonalMin, diagonalMax);
-            diagonal = inp.input();
+            diagonal = inp.inputPositiveNumber();
             if (diagonal < diagonalMin || diagonal > diagonalMax) {
                 System.out.println("Вы вышли за диапазон");
             } else break;
@@ -88,7 +88,7 @@ public class Quadrangle {
             System.out.println("2 - вычислить площадь");
             System.out.println("3 - вычислить периметр");
             System.out.println("4 - выход");
-            int choice = (int) inp.input();
+            int choice = (int) inp.inputPositiveNumber();
             switch (choice) {
                 case 1:
                     show();

@@ -176,7 +176,6 @@ public class Nums {
             switch (choice) {
                 case 1:
                     System.out.println(strMethods.deleteStartEndAndSpaces(str));
-                    ;
                     break;
                 case 2:
                     System.out.println(strMethods.addLeftSpace(str));

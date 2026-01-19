@@ -11,21 +11,21 @@ public class Main {
         int carrying;
         while (true) {
             System.out.println("Выберите вид транпортного средства:\n1 - Пассажирский транспорт\n2 - Грузовой автомобиль\n3 - Выход");
-            int inp = (int) input.input();
+            int inp = (int) input.inputPositiveNumber();
             switch (inp) {
                 case 1:
                     System.out.println("Введите: максимальный запас топлива, расход топлива, кол-во пассажирских мест");
-                    fuel = (int) input.input();
-                    consumption = (int) input.input();
-                    passengers = (int) input.input();
+                    fuel = (int) input.inputPositiveNumber();
+                    consumption = (int) input.inputPositiveNumber();
+                    passengers = (int) input.inputPositiveNumber();
                     Car car = new Car(fuel, consumption, passengers);
                     car.menu(input);
                     break;
                 case 2:
                     System.out.println("Введите: максимальный запас топлива, расход топлива, грузоподъемность");
-                    fuel = (int) input.input();
-                    consumption = (int) input.input();
-                    carrying = (int) input.input();
+                    fuel = (int) input.inputPositiveNumber();
+                    consumption = (int) input.inputPositiveNumber();
+                    carrying = (int) input.inputPositiveNumber();
                     Truck truck = new Truck(fuel ,consumption, carrying);
                     truck.menu(input);
                     break;

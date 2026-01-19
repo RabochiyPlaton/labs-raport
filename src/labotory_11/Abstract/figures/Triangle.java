@@ -49,7 +49,7 @@ public class Triangle extends Figure {
             System.out.println("4 - расчитать гипотенузу");
             System.out.println("5 - найти среднюю линию треугольника");
             System.out.println("6 - выход");
-            int choice = (int) inp.input();
+            int choice = (int) inp.inputPositiveNumber();
             switch (choice) {
                 case 1:
                     show();

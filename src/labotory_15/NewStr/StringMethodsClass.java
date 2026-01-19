@@ -283,7 +283,7 @@ public class StringMethodsClass implements StringMethods {
 
     @Override
     public String getYearStr(int year) {
-        if (year < 1000 || year > 2999) return year + " года";
+        if (year > 2999) return year + " года";
         String[] hundreds = {"", "сто ", "двести ", "триста ", "четыреста ", "пятьсот ", "шестьсот ",
                 "семьсот ", "восемьсот ", "девятьсот "};
         String[] tens = {"", "двадцать ", "тридцать ", "сорок ", "пятьдесят ", "шестьдесят ", "семьдесят ", "воемьдесят ", "девяносто "};
@@ -297,7 +297,7 @@ public class StringMethodsClass implements StringMethods {
                 "девятнадцатого"};
         String yearStr = "";
         if (year / 1000 == 2) yearStr += "две ";
-        yearStr += "тысяча ";
+        if (year / 1000 != 0) yearStr += "тысяча ";
         if (year % 1000 == 0) {
             if (year / 1000 == 2) return "двух тысячного года";
             else return "однотысячного года";

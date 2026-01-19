@@ -46,11 +46,13 @@ public class Quadrangle extends Figure {
         diagonalMax1 = side1 + side2;
         diagonalMin2 = Math.abs(side3 - side4);
         diagonalMax2 = side3 + side4;
-        diagonalMin = Math.max(diagonalMin1, diagonalMin2);
-        diagonalMax = Math.min(diagonalMax1, diagonalMax2);
+        if (diagonalMin1 < diagonalMin2) diagonalMin = diagonalMin1;
+        else diagonalMin = diagonalMin2;
+        if (diagonalMax1 > diagonalMax2) diagonalMax = diagonalMax1;
+        else diagonalMax = diagonalMax2;
         while (true) {
             System.out.printf("Введите диагональ (возможной диапазон: %.3f < %.3f)", diagonalMin, diagonalMax);
-            diagonal = inp.input();
+            diagonal = inp.inputPositiveNumber();
             if (diagonal < diagonalMin || diagonal > diagonalMax) {
                 System.out.println("Вы вышли за диапазон");
             } else break;
@@ -92,7 +94,7 @@ public class Quadrangle extends Figure {
             System.out.println("2 - вычислить площадь");
             System.out.println("3 - вычислить периметр");
             System.out.println("4 - выход");
-            int choice = (int) inp.input();
+            int choice = (int) inp.inputPositiveNumber();
             switch (choice) {
                 case 1:
                     show();

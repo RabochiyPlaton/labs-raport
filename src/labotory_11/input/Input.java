@@ -6,16 +6,23 @@ public class Input {
 
     private final Scanner scanner = new Scanner(System.in);
 
-    public double input() {
-        double side;
+    public double inputPositiveNumber() {
+        double x;
         while (true) {
-            side = scanner.nextDouble();
+            x = scanner.nextDouble();
             scanner.nextLine();
-            if (side <= 0) {
+            if (x <= 0) {
                 System.out.println("Введите число > 0");
                 continue;
             }
-            return side;
+            return x;
         }
+    }
+
+    public double inputAnyNumber() {
+        double x;
+        x = scanner.nextDouble();
+        scanner.nextLine();
+        return x;
     }
 }

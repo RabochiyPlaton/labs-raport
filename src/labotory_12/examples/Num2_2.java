@@ -14,6 +14,13 @@ public class Num2_2 extends Num2 {
         System.out.println();
     }
 
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+    public String getPublisher() {
+        return publisher;
+    }
+
     public String getTitle() {
         return title;
     }

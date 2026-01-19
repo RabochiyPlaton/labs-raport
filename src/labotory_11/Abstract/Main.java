@@ -11,10 +11,10 @@ public class Main {
         int choice;
         while (count < sides.length) {
             System.out.println("Хотите ввести сторону?(1 - да, 2 - нет)");
-            choice = (int) inp.input();
+            choice = (int) inp.inputPositiveNumber();
             if (choice == 1) {
                 System.out.println("Введите " + (count + 1) + "-ую сторону:");
-                sides[count] = inp.input();
+                sides[count] = inp.inputPositiveNumber();
                 if (sides[count] != 0) count++;
             } else break;
         }
@@ -22,7 +22,7 @@ public class Main {
         switch (count) {
             case 1:
                 System.out.println("1 - равносторонний треугольник\n2 - квадрат\n3 - круг");
-                choice = (int) inp.input();
+                choice = (int) inp.inputPositiveNumber();
                 if (choice == 1) {
                     Triangle triangle = new Triangle(sides[0]);
                     triangle.menu(inp);
@@ -36,7 +36,7 @@ public class Main {
                 break;
             case 2:
                 System.out.println("1 - равнобедренный треугольник\n2 - прямоугольник");
-                choice = (int) inp.input();
+                choice = (int) inp.inputPositiveNumber();
                 if (choice == 1) {
                     labotory_11.NotAbstract.figures.Triangle triangle;
                     if (sides[0] > sides[1]) {

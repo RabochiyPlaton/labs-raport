@@ -16,7 +16,6 @@ public class AutomaticTable {
         elements[7] = new Element(8, "Кислород", "O", "газ", 15.999);
         elements[8] = new Element(9, "Фтор", "F", "газ", 18.998);
         elements[9] = new Element(10, "Неон", "Ne", "газ", 20.180);
-
         elements[10] = new Element(11, "Натрий", "Na", "твёрдый", 22.990);
         elements[11] = new Element(12, "Магний", "Mg", "твёрдый", 24.305);
         elements[12] = new Element(13, "Алюминий", "Al", "твёрдый", 26.982);
@@ -27,7 +26,6 @@ public class AutomaticTable {
         elements[17] = new Element(18, "Аргон", "Ar", "газ", 39.948);
         elements[18] = new Element(19, "Калий", "K", "твёрдый", 39.098);
         elements[19] = new Element(20, "Кальций", "Ca", "твёрдый", 40.078);
-
         elements[20] = new Element(21, "Скандий", "Sc", "твёрдый", 44.956);
         elements[21] = new Element(22, "Титан", "Ti", "твёрдый", 47.867);
         elements[22] = new Element(23, "Ванадий", "V", "твёрдый", 50.942);
@@ -38,7 +36,6 @@ public class AutomaticTable {
         elements[27] = new Element(28, "Никель", "Ni", "твёрдый", 58.693);
         elements[28] = new Element(29, "Медь", "Cu", "твёрдый", 63.546);
         elements[29] = new Element(30, "Цинк", "Zn", "твёрдый", 65.38);
-
         elements[30] = new Element(31, "Галлий", "Ga", "твёрдый", 69.723);
         elements[31] = new Element(32, "Германий", "Ge", "твёрдый", 72.630);
         elements[32] = new Element(33, "Мышьяк", "As", "твёрдый", 74.922);
@@ -49,7 +46,6 @@ public class AutomaticTable {
         elements[37] = new Element(38, "Стронций", "Sr", "твёрдый", 87.62);
         elements[38] = new Element(39, "Иттрий", "Y", "твёрдый", 88.906);
         elements[39] = new Element(40, "Цирконий", "Zr", "твёрдый", 91.224);
-
         elements[40] = new Element(41, "Ниобий", "Nb", "твёрдый", 92.906);
         elements[41] = new Element(42, "Молибден", "Mo", "твёрдый", 95.95);
         elements[42] = new Element(43, "Технеций", "Tc", "твёрдый", 98.0);
@@ -60,7 +56,6 @@ public class AutomaticTable {
         elements[47] = new Element(48, "Кадмий", "Cd", "твёрдый", 112.41);
         elements[48] = new Element(49, "Индий", "In", "твёрдый", 114.82);
         elements[49] = new Element(50, "Олово", "Sn", "твёрдый", 118.71);
-
         elements[50] = new Element(51, "Сурьма", "Sb", "твёрдый", 121.76);
         elements[51] = new Element(52, "Теллур", "Te", "твёрдый", 127.60);
         elements[52] = new Element(53, "Иод", "I", "твёрдый", 126.90);
@@ -71,7 +66,6 @@ public class AutomaticTable {
         elements[57] = new Element(58, "Церий", "Ce", "твёрдый", 140.12);
         elements[58] = new Element(59, "Празеодим", "Pr", "твёрдый", 140.91);
         elements[59] = new Element(60, "Неодим", "Nd", "твёрдый", 144.24);
-
         elements[60] = new Element(61, "Прометий", "Pm", "твёрдый", 145.0);
         elements[61] = new Element(62, "Самарий", "Sm", "твёрдый", 150.36);
         elements[62] = new Element(63, "Европий", "Eu", "твёрдый", 151.96);
@@ -82,7 +76,6 @@ public class AutomaticTable {
         elements[67] = new Element(68, "Эрбий", "Er", "твёрдый", 167.26);
         elements[68] = new Element(69, "Тулий", "Tm", "твёрдый", 168.93);
         elements[69] = new Element(70, "Иттербий", "Yb", "твёрдый", 173.05);
-
         elements[70] = new Element(71, "Лютеций", "Lu", "твёрдый", 174.97);
         elements[71] = new Element(72, "Гафний", "Hf", "твёрдый", 178.49);
         elements[72] = new Element(73, "Тантал", "Ta", "твёрдый", 180.95);
@@ -93,7 +86,6 @@ public class AutomaticTable {
         elements[77] = new Element(78, "Платина", "Pt", "твёрдый", 195.08);
         elements[78] = new Element(79, "Золото", "Au", "твёрдый", 196.97);
         elements[79] = new Element(80, "Ртуть", "Hg", "жидкий", 200.59);
-
         elements[80] = new Element(81, "Таллий", "Tl", "твёрдый", 204.38);
         elements[81] = new Element(82, "Свинец", "Pb", "твёрдый", 207.2);
         elements[82] = new Element(83, "Висмут", "Bi", "твёрдый", 208.98);
@@ -104,7 +96,6 @@ public class AutomaticTable {
         elements[87] = new Element(88, "Радий", "Ra", "твёрдый", 226.0);
         elements[88] = new Element(89, "Актиний", "Ac", "твёрдый", 227.0);
         elements[89] = new Element(90, "Торий", "Th", "твёрдый", 232.04);
-
         elements[90] = new Element(91, "Протактиний", "Pa", "твёрдый", 231.04);
         elements[91] = new Element(92, "Уран", "U", "твёрдый", 238.03);
         elements[92] = new Element(93, "Нептуний", "Np", "твёрдый", 237.0);
@@ -115,7 +106,6 @@ public class AutomaticTable {
         elements[97] = new Element(98, "Калифорний", "Cf", "твёрдый", 251.0);
         elements[98] = new Element(99, "Эйнштейний", "Es", "твёрдый", 252.0);
         elements[99] = new Element(100, "Фермий", "Fm", "твёрдый", 257.0);
-
         elements[100] = new Element(101, "Менделевий", "Md", "твёрдый", 258.0);
         elements[101] = new Element(102, "Нобелий", "No", "твёрдый", 259.0);
         elements[102] = new Element(103, "Лоуренсий", "Lr", "твёрдый", 262.0);
