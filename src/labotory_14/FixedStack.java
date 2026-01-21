@@ -4,7 +4,6 @@ public class FixedStack extends AbstractQueue {
 
     FixedStack(int size) {
         super(size);
-        rear = 0;
     }
 
     @Override
@@ -23,6 +22,8 @@ public class FixedStack extends AbstractQueue {
             System.out.print(" Очередь пуста");
             return ' ';
         }
-        return queue[--rear];
+        char ch = queue[--rear];
+        queue[rear] = 'Ø';
+        return ch;
     }
 }

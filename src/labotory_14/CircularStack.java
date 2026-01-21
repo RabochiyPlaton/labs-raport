@@ -7,11 +7,12 @@ public class CircularStack extends AbstractQueue {
 
     @Override
     public void put(char ch) {
-        if (front == queue.length) {
-            System.out.println("Очередь заполнена, нужно извлечь элементы");
-            return;
+        if (count == queue.length) {
+            System.out.println("Очередь заполнена");
         }
-        queue[front++] = ch;
+        queue[front] = ch;
+        front = (front + 1) % queue.length;
+        count++;
     }
 
     @Override
@@ -20,6 +21,8 @@ public class CircularStack extends AbstractQueue {
             System.out.print(" Очередь пуста");
             return ' ';
         }
-        return queue[--front];
+        char ch = queue[--front];
+        queue[front] = 'Ø';
+        return ch;
     }
 }

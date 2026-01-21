@@ -23,6 +23,8 @@ public class DynamicQueue extends AbstractQueue {
             System.out.print(" Очередь пуста");
             return ' ';
         }
-        return queue[rear++];
+        char ch = queue[rear++];
+        queue[rear-1] = 'Ø';
+        return ch;
     }
 }

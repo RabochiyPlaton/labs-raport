@@ -21,6 +21,8 @@ public class DynamicCircularStack extends AbstractQueue {
             System.out.print(" Очередь пуста");
             return ' ';
         }
-        return queue[--front];
+        char ch = queue[--front];
+        queue[front] = 'Ø';
+        return ch;
     }
 }

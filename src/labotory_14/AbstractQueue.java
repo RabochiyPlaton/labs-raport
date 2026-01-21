@@ -16,6 +16,18 @@ abstract class AbstractQueue implements Och {
     }
 
     @Override
+    public void print() {
+        System.out.println("Состав очереди: ");
+        System.out.print("[ ");
+        for(int i = 0; i < queue.length; i++) {
+            System.out.print(queue[i]);
+            if (i<queue.length-1) System.out.print("; ");
+            else System.out.print(" ");
+        }
+        System.out.print("]");
+    }
+
+    @Override
     public void reset() {
         front = rear = 0;
         queue = new char[queue.length];

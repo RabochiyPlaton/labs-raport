@@ -18,9 +18,11 @@ public class FixedQueue extends AbstractQueue {
     @Override
     public char get() {
         if (front == rear) {
-            System.out.print(" Очередь пуста");
+            System.out.print("Очередь пуста");
             return ' ';
         }
-        return queue[rear++];
+        char ch = queue[rear++];
+        queue[rear-1] = 'Ø';
+        return ch;
     }
 }

@@ -4,25 +4,30 @@ public class CircularQueue extends AbstractQueue {
 
     CircularQueue(int size) {
         super(size);
-        count = 0;
     }
 
     @Override
     public void put(char ch) {
-        if (front == queue.length) {
-            System.out.println("Стек заполнен");
+        if (count == queue.length) {
+            System.out.println("Очередь заполнена");
             return;
         }
-        queue[front++] = ch;
+        queue[front] = ch;
+        front = (front + 1) % queue.length;
+        count++;
     }
 
     @Override
     public char get() {
-        if (front == 0) {
-            System.out.println("Стек пуст");
+        if (count == 0) {
+            System.out.print(" Очередь пуста");
             return ' ';
         }
-        return queue[--front];
+        char ch = queue[rear];
+        queue[rear] = 'Ø';
+        rear = (rear + 1) % queue.length;
+        count--;
+        return ch;
     }
 }
 

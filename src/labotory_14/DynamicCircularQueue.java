@@ -4,7 +4,6 @@ public class DynamicCircularQueue extends AbstractQueue {
 
     DynamicCircularQueue(int size) {
         super(size);
-        count = 0;
     }
 
     @Override
@@ -30,6 +29,7 @@ public class DynamicCircularQueue extends AbstractQueue {
             return ' ';
         }
         char ch = queue[rear];
+        queue[rear] = 'Ø';
         rear = (rear + 1) % queue.length;
         count--;
         return ch;

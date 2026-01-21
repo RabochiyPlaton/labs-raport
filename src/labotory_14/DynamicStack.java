@@ -4,7 +4,6 @@ public class DynamicStack extends AbstractQueue {
 
     DynamicStack(int size) {
         super(size);
-        rear = 0;
     }
 
     @Override
@@ -25,6 +24,8 @@ public class DynamicStack extends AbstractQueue {
             System.out.print(" Очередь пуста");
             return ' ';
         }
-        return queue[--rear];
+        char ch = queue[--rear];
+        queue[rear] = 'Ø';
+        return ch;
     }
 }
