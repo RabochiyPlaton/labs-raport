@@ -11,7 +11,7 @@ public class Triangle extends Figure {
         side2 = side3 = side1;
         style = "односторонний";
         if (isExtends()) {
-            throw new IsExtends("Такого треугольника не существует");
+            System.out.println("Такого треугольника не существует");
         }
     }
 
@@ -21,7 +21,7 @@ public class Triangle extends Figure {
         if (isRectangularTriangle()) style = "равнобедренный прямоугольный";
         else style = "равнобедренный";
         if (isExtends()) {
-            throw new IsExtends("Такого треугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
@@ -30,7 +30,7 @@ public class Triangle extends Figure {
         if (isRectangularTriangle()) style = "разносторонний прямоугольный";
         else style = "разносторонний";
         if (isExtends()) {
-            throw new IsExtends("Такого треугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
