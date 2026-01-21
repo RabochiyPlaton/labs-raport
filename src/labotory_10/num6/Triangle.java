@@ -1,19 +1,19 @@
 package labotory_10.num6;
 
-public class Nasled2 extends Nasled1 {
+public class Triangle extends Figure {
 
     String style;
 
-    Nasled2() {
+    Triangle() {
         super();
         style = "null";
     }
 
-    Nasled2(double x) {
+    Triangle(double x) {
         super(x);
         style = "равнобедренный";
     }
-    Nasled2(String s, double w, double h) {
+    Triangle(String s, double w, double h) {
         super(w, h);
         style = s;
     }

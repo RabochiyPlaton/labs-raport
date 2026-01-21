@@ -4,38 +4,43 @@ import labotory_11.input.Input;
 
 public class Quadrangle extends Figure {
 
-    private final double side2;
-    private final double side3;
-    private final double side4;
-    private final String style;
+    private double side4;
+    private String style;
 
     public Quadrangle(double s1) {
         super(s1);
         side2 = side3 = side4 = side1;
         style = "квадрат";
         if (isExists()) {
-            throw new IsExtends("Такого четырехугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Quadrangle(double s1, double s2) {
-        super(s1);
+        super(s1,s2);
         side3 = side1;
-        side2 = side4 = s2;
+        side4 = side2;
         style = "прямоугольник";
         if (isExists()) {
-            throw new IsExtends("Такого четырехугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
+        }
+    }
+
+    public Quadrangle(double s1, double s2, double s3) {
+        super(s1,s2,s3);
+        side4 = s3;
+        style = "равнобедренная трапеция";
+        if (isExists()) {
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Quadrangle(double s1, double s2, double s3, double s4) {
-        super(s1);
-        side2 = s2;
-        side3 = s3;
+        super(s1,s2,s3);
         side4 = s4;
         style = "произвольный четырехугольник";
         if (isExists()) {
-            throw new IsExtends("Такого четырехугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 

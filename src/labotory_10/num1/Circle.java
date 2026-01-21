@@ -1,8 +1,6 @@
 package labotory_10.num1;
 
-import labotory_9.Main;
-
-public class Circle extends Nasled1 {
+public class Circle extends Figure {
 
     double radius;
 

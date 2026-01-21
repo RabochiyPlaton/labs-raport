@@ -1,5 +1,7 @@
 package labotory_12.examples;
 
+import labotory_12.books.Num2;
+
 public class Num2_2 extends Num2 {
     private String publisher;
 

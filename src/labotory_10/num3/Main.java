@@ -1,10 +1,10 @@
 package labotory_10.num3;
 
 
-public class Nasled3 {
+public class Main {
     public static void main(String[] args) {
-        Nasled2 tr1 = new Nasled2();
-        Nasled2 tr2 = new Nasled2();
+        Triangle tr1 = new Triangle();
+        Triangle tr2 = new Triangle();
         tr1.setWidth(4.0);
         tr1.setHeight(4.0);
         tr1.style = "равнобедренный";

@@ -38,34 +38,41 @@ public class Main {
                 System.out.println("1 - равнобедренный треугольник\n2 - прямоугольник");
                 choice = (int) inp.inputPositiveNumber();
                 if (choice == 1) {
-                    labotory_11.NotAbstract.figures.Triangle triangle;
+                    Triangle triangle;
                     if (sides[0] > sides[1]) {
-                        triangle = new labotory_11.NotAbstract.figures.Triangle(sides[0], sides[1]);
+                        triangle = new Triangle(sides[0], sides[1]);
                     } else {
-                        triangle = new labotory_11.NotAbstract.figures.Triangle(sides[1], sides[0]);
+                        triangle = new Triangle(sides[1], sides[0]);
                     }
                     triangle.menu(inp);
                 } else {
-                    labotory_11.NotAbstract.figures.Quadrangle quadrangle = new labotory_11.NotAbstract.figures.Quadrangle(sides[0], sides[1]);
+                    Quadrangle quadrangle = new Quadrangle(sides[0], sides[1]);
                     quadrangle.menu(inp);
                 }
                 break;
             case 3:
                 Triangle triangle;
-                if (sides[0] == sides[1] || sides[0] == sides[2] || sides[1] == sides[2]) {
-                    System.out.println("Можно создать равнобедренный треугольник");
-                    if (sides[0] == sides[1]) {
-                        triangle = new Triangle(sides[0], sides[1]);
-                    } else if (sides[0] == sides[2]) {
-                        triangle = new Triangle(sides[0], sides[2]);
+                System.out.println("1 - треугольник\n2 - равнобедренная трапеция");
+                choice = (int) inp.inputPositiveNumber();
+                if (choice == 1) {
+                    if (sides[0] == sides[1] || sides[0] == sides[2] || sides[1] == sides[2]) {
+                        System.out.println("Можно создать равнобедренный треугольник");
+                        if (sides[0] == sides[1]) {
+                            triangle = new Triangle(sides[0], sides[1]);
+                        } else if (sides[0] == sides[2]) {
+                            triangle = new Triangle(sides[0], sides[2]);
+                        } else {
+                            triangle = new Triangle(sides[1], sides[0]);
+                        }
                     } else {
-                        triangle = new Triangle(sides[1], sides[0]);
+                        System.out.println("Можно создать разносторонний треугольник");
+                        triangle = new Triangle(sides[0], sides[1], sides[2]);
                     }
+                    triangle.menu(inp);
                 } else {
-                    System.out.println("Можно создать разносторонний треугольник");
-                    triangle = new Triangle(sides[0], sides[1], sides[2]);
+                    Quadrangle quadrangle = new Quadrangle(sides[0], sides[1], sides[2]);
+                    quadrangle.menu(inp);
                 }
-                triangle.menu(inp);
                 break;
             case 4:
                 if (sides[0] == sides[1] && sides[1] == sides[2] && sides[2] == sides[3]) {

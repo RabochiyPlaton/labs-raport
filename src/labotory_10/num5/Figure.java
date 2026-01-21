@@ -1,8 +1,13 @@
-package labotory_10.num3;
+package labotory_10.num5;
 
-public class Nasled1 {
+public class Figure {
     private double width;
     private double height;
+
+    Figure(double w, double h) {
+        width = w;
+        height = h;
+    }
 
     public double getHeight() {
         return height;

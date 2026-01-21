@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
         while (true) {
-            System.out.println("\nВыберите задание: 1 - 14\n15 для выхода");
+            System.out.println("\nВыберите задание: 1 - 16\n17 для выхода");
             String input = scanner.nextLine();
             if (input.length() == 1 && input.charAt(0) >= '0' && input.charAt(0) <= '9') {
                 choice = input.charAt(0) - '0';
@@ -119,6 +119,18 @@ public class Main {
                     nums.num14();
                     break;
                 case 15:
+                    System.out.println("✦  Задание 15   ✦");
+                    System.out.println("━━━━━━━━━━━━━━━━━");
+                    System.out.println("Создать программу выравнивания текста по запросу пользователя: 1. по левому краю; 2. по правому краю; 3. по центру; 4. по ширине");
+                    System.out.println("━━━━━━━━━━━━━━━━━");
+                    break;
+                case 16:
+                    System.out.println("✦  Задание 16   ✦");
+                    System.out.println("━━━━━━━━━━━━━━━━━");
+                    System.out.println("Создать программу выравнивания текста по запросу пользователя: 1. по левому краю; 2. по правому краю; 3. по центру; 4. по ширине");
+                    System.out.println("━━━━━━━━━━━━━━━━━");
+                    break;
+                case 17:
                     return;
                 default:
                     System.out.println("Нет такого варианта");

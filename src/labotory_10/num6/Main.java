@@ -1,11 +1,11 @@
 package labotory_10.num6;
 
 
-public class Nasled3 {
+public class Main {
     public static void main(String[] args) {
-        Nasled2 tr1 = new Nasled2();
-        Nasled2 tr2 = new Nasled2("прямоугольный", 12.0, 8.0);
-        Nasled2 tr3 = new Nasled2(4.0);
+        Triangle tr1 = new Triangle();
+        Triangle tr2 = new Triangle("прямоугольный", 12.0, 8.0);
+        Triangle tr3 = new Triangle(4.0);
         tr1 = tr2;
         System.out.println("Описание треугольника#1: ");
         tr1.show1();

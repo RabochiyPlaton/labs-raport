@@ -1,4 +1,4 @@
-package labotory_12.examples;
+package labotory_12.books;
 
 public class Num2 {
     protected String title;

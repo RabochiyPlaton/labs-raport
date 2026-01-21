@@ -15,6 +15,6 @@ public class Num2_Main {
         for (int i = 0; i < books.length; i++)
             if (books[i].getAuthor() == "Герберт Шилдт")
                 System.out.println(books[i].getTitle());
-        books[0].title = "test title";
+//        books[0].title = "test title";
     }
 }

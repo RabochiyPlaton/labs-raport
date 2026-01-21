@@ -4,9 +4,7 @@ import labotory_11.input.Input;
 
 public class Triangle extends Figure {
 
-    private final double side2;
-    private final double side3;
-    private final String style;
+    private String style;
 
     public Triangle(double s1) {
         super(s1);
@@ -18,9 +16,8 @@ public class Triangle extends Figure {
     }
 
     public Triangle(double s1, double s2) {
-        super(s1);
+        super(s1,s2);
         side3 = side1;
-        side2 = s2;
         if (isRectangularTriangle()) style = "равнобедренный прямоугольный";
         else style = "равнобедренный";
         if (isExtends()) {
@@ -29,9 +26,7 @@ public class Triangle extends Figure {
     }
 
     public Triangle(double s1, double s2, double s3) {
-        super(s1);
-        side2 = s2;
-        side3 = s3;
+        super(s1,s2,s3);
         if (isRectangularTriangle()) style = "разносторонний прямоугольный";
         else style = "разносторонний";
         if (isExtends()) {

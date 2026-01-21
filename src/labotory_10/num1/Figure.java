@@ -1,6 +1,6 @@
 package labotory_10.num1;
 
-public class Nasled1 {
+public class Figure {
     double width;
     double height;
 

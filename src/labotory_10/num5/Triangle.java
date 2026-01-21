@@ -1,10 +1,10 @@
 package labotory_10.num5;
 
-public class Nasled2 extends Nasled1 {
+public class Triangle extends Figure {
 
     String style;
 
-    Nasled2(String s, double w, double h) {
+    Triangle(String s, double w, double h) {
         super(w, h);
         style = s;
     }

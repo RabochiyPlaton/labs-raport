@@ -1,6 +1,6 @@
 package labotory_10.num3;
 
-public class Nasled2 extends Nasled1 {
+public class Triangle extends Figure {
 
     String style;
 
