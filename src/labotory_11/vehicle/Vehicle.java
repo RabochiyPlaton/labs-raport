@@ -19,6 +19,8 @@ abstract public class Vehicle {
 
     abstract void move();
 
+    abstract void refuel();
+
     abstract void honk();
 
     abstract void menu(Input input);

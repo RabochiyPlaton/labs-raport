@@ -28,6 +28,7 @@ public class LandVehicle extends Vehicle{
         } else System.out.println("Недостаточно топлива, нужно заправиться");
     }
 
+    @Override
     void refuel() {
         fuelNow = fuel;
         System.out.println("Вы заправились");
