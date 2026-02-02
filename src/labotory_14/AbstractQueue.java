@@ -5,10 +5,12 @@ abstract class AbstractQueue implements Och {
     protected char[] queue;
     protected int front, rear;
     protected int count;
+    protected String style;
 
     AbstractQueue(int size) {
         front = rear = count = 0;
         queue = new char[size];
+        Och.filling(queue);
     }
 
     public char[] getQueue() {
@@ -17,6 +19,7 @@ abstract class AbstractQueue implements Och {
 
     @Override
     public void print() {
+        System.out.println("Тип очереди = <<"+style+">>");
         System.out.println("Состав очереди: ");
         System.out.print("[ ");
         for(int i = 0; i < queue.length; i++) {
@@ -29,8 +32,9 @@ abstract class AbstractQueue implements Och {
 
     @Override
     public void reset() {
-        front = rear = 0;
+        front = rear = count = 0;
         queue = new char[queue.length];
+        Och.filling(queue);
     }
 
     @Override

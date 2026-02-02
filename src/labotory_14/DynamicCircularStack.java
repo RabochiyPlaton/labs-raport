@@ -3,12 +3,14 @@ package labotory_14;
 public class DynamicCircularStack extends AbstractQueue {
     DynamicCircularStack(int size) {
         super(size);
+        style = "Кольцевой-динамический стэк";
     }
 
     @Override
     public void put(char ch) {
         if (front == queue.length) {
             char[] t = new char[queue.length * 2];
+            Och.filling(t);
             for (int i = 0; i < queue.length; i++) t[i] = queue[i];
             queue = t;
         }

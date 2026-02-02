@@ -2,7 +2,7 @@ package labotory_11.vehicle;
 
 import labotory_11.input.Input;
 
-public class Car extends Vehicle {
+public class Car extends LandVehicle{
 
     private final int passengers;
     private int quantity;

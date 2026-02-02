@@ -5,19 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int queueType, queueKind;
         while (true) {
-            System.out.println("Выберите тип очереди:\n1 - очередь\n2 - стэк\n3 - Выход из программы");
-            queueType = scanner.nextInt();
-            if (queueType == 1 || queueType == 2) {
-                System.out.println("Выберите вид очереди:\n1 - Фиксированная\n2 - Кольцевая\n3 - Динамическая\n4 - Кольцевая-Динамическая");
-                queueKind = scanner.nextInt();
-                if (queueKind >= 1 && queueKind <= 4) {
-                    Och och = createQueue(queueType, queueKind, scanner);
-                    menu(scanner, och);
-                } else System.out.println("Нет такого варианта, повторите попытку");
-            } else if (queueType == 3) return;
-            else System.out.println("Нет такого варианта, повторите попытку");
+            Och och = CreateQueue.create(scanner);
+            menu(scanner, och);
         }
     }
 
@@ -25,7 +15,7 @@ public class Main {
         char chPut, ch;
         int choice, size2;
         while (true) {
-            System.out.println("\n1 - добавить элементы\n2 - извлечь элементы\n3 - распечатать весь массив\n4 - сбросить очередь\n5 - выход");
+            System.out.println("\n1 - добавить элементы\n2 - извлечь элементы\n3 - распечатать весь массив\n4 - сбросить очередь\n5 - сохранить очередь\n6 - выход");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -60,43 +50,14 @@ public class Main {
                     och.reset();
                     break;
                 case 5:
+                    System.out.println("\nСохранение очереди...");
+                    och = Och.save(och, scanner);
+                    break;
+                case 6:
                     return;
                 default:
                     System.out.println("Нет такого варианта");
             }
         }
-    }
-
-    static Och createQueue(int queueType, int queueKind, Scanner scanner) {
-        System.out.print("Задайте длинну очереди: ");
-        int length = scanner.nextInt();
-        if (queueType == 1) {
-            switch (queueKind) {
-                case 1:
-                    return new FixedQueue(length);
-                case 2:
-                    return new CircularQueue(length);
-                case 3:
-                    return new DynamicQueue(length);
-                case 4:
-                    return new DynamicCircularQueue(length);
-                default:
-                    System.out.println("Нет такого варианта, повторите попытку");
-            }
-        } else {
-            switch (queueKind) {
-                case 1:
-                    return new FixedStack(length);
-                case 2:
-                    return new CircularStack(length);
-                case 3:
-                    return new DynamicStack(length);
-                case 4:
-                    return new DynamicCircularStack(length);
-                default:
-                    System.out.println("Нет такого варианта, повторите попытку");
-            }
-        }
-        return null;
     }
 }

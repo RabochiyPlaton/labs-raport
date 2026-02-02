@@ -3,6 +3,7 @@ package labotory_14;
 public class CircularStack extends AbstractQueue {
     CircularStack(int size) {
         super(size);
+        style = "Кольцевой стэк";
     }
 
     @Override
@@ -17,12 +18,14 @@ public class CircularStack extends AbstractQueue {
 
     @Override
     public char get() {
-        if (front == 0) {
+        if (count == 0) {
             System.out.print(" Очередь пуста");
             return ' ';
         }
-        char ch = queue[--front];
+        front = (front - 1 + queue.length) % queue.length;
+        char ch = queue[front];
         queue[front] = 'Ø';
+        count--;
         return ch;
     }
 }

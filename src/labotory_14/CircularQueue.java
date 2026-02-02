@@ -4,6 +4,7 @@ public class CircularQueue extends AbstractQueue {
 
     CircularQueue(int size) {
         super(size);
+        style = "Кольцевая очередь";
     }
 
     @Override

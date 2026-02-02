@@ -4,6 +4,7 @@ public class FixedStack extends AbstractQueue {
 
     FixedStack(int size) {
         super(size);
+        style = "Фиксированный стэк";
     }
 
     @Override

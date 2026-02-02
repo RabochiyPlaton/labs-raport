@@ -4,12 +4,14 @@ public class DynamicCircularQueue extends AbstractQueue {
 
     DynamicCircularQueue(int size) {
         super(size);
+        style = "Кольцевая-динамическая очередь";
     }
 
     @Override
     public void put(char ch) {
         if (count == queue.length) {
             char[] t = new char[queue.length * 2];
+            Och.filling(t);
             for (int i = 0; i < count; i++) {
                 t[i] = queue[(rear + i) % queue.length];
             }

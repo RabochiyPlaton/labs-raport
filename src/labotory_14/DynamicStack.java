@@ -4,12 +4,14 @@ public class DynamicStack extends AbstractQueue {
 
     DynamicStack(int size) {
         super(size);
+        style = "Динамический стэк";
     }
 
     @Override
     public void put(char ch) {
         if (front == queue.length) {
             char[] t = new char[queue.length * 2];
+            Och.filling(t);
             for (int i = 0; i < queue.length; i++)
                 t[i] = queue[i];
             queue = t;

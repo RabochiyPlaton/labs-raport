@@ -4,6 +4,7 @@ public class FixedQueue extends AbstractQueue {
 
     FixedQueue(int size) {
         super(size);
+        style = "Фиксированная очередь";
     }
 
     @Override
