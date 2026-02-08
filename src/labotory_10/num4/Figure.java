@@ -4,20 +4,13 @@ public class Figure {
     protected double width;
     protected double height;
 
-    public double getHeight() {
-        return height;
+    Figure(double w) {
+        width = w;
     }
 
-    public double getWidth() {
-        return width;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
+    Figure(double w, double h) {
+        width = w;
+        height = h;
     }
 
     void show1() {

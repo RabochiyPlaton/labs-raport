@@ -5,43 +5,43 @@ import labotory_11.input.Input;
 public class Quadrangle extends Figure {
 
     private double side4;
-    private String style;
+    private String style = "произвольный четырехугольник";
 
     public Quadrangle(double s1) {
         super(s1);
         side2 = side3 = side4 = side1;
-        style = "квадрат";
         if (isExists()) {
             System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Quadrangle(double s1, double s2) {
-        super(s1,s2);
+        super(s1, s2);
         side3 = side1;
         side4 = side2;
-        style = "прямоугольник";
         if (isExists()) {
             System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Quadrangle(double s1, double s2, double s3) {
-        super(s1,s2,s3);
+        super(s1, s2, s3);
         side4 = s3;
-        style = "равнобедренная трапеция";
         if (isExists()) {
             System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Quadrangle(double s1, double s2, double s3, double s4) {
-        super(s1,s2,s3);
+        super(s1, s2, s3);
         side4 = s4;
-        style = "произвольный четырехугольник";
         if (isExists()) {
             System.out.println("Такого четырехугольника не существует");
         }
+    }
+
+    public void setStyle(String s) {
+        style = s;
     }
 
     private double createDiagonal() {
@@ -56,7 +56,7 @@ public class Quadrangle extends Figure {
         if (diagonalMax1 > diagonalMax2) diagonalMax = diagonalMax1;
         else diagonalMax = diagonalMax2;
         while (true) {
-            System.out.printf("Введите диагональ (возможной диапазон: %.3f < %.3f)", diagonalMin, diagonalMax);
+            System.out.printf("Введите диагональ (возможной диапазон: %.2f < d < %.2f)", diagonalMin, diagonalMax);
             diagonal = inp.inputPositiveNumber();
             if (diagonal < diagonalMin || diagonal > diagonalMax) {
                 System.out.println("Вы вышли за диапазон");
@@ -67,15 +67,34 @@ public class Quadrangle extends Figure {
 
     @Override
     protected double area() {
-        if (style.equals("квадрат")) {
-            return side1 * side1;
-        } else if (style.equals("прямоугольник")) {
-            return side1 * side2;
-        } else {
-            double diagonal = createDiagonal();
-            Triangle triangle1 = new Triangle(side1, side2, diagonal);
-            Triangle triangle2 = new Triangle(side3, side4, diagonal);
-            return triangle1.area() + triangle2.area();
+        Input inp = new Input();
+        double h;
+        switch (style) {
+            case "квадрат":
+                return side1 * side1;
+            case "прямоугольник":
+                return side1 * side2;
+            case "ромб":
+                System.out.println("Введите первую диагональ:");
+                double d1 = inp.inputPositiveNumber();
+                System.out.println("Введите вторую диагональ:");
+                double d2 = inp.inputPositiveNumber();
+                return 0.5 * d1 * d2;
+            case "параллелограмм":
+                System.out.println("Введите высоту:");
+                h = inp.inputPositiveNumber();
+                return side1 * h;
+            case "равнобедренная трапеция":
+            case "трапеция":
+                System.out.println("Введите высоту трапеции:");
+                h = inp.inputPositiveNumber();
+                return ((side1 + side3) / 2) * h;
+            default:
+                System.out.println("Расчет площади произвольного четырехугольника через диагональ:");
+                double diagonal = createDiagonal();
+                Triangle triangle1 = new Triangle(side1, side2, diagonal);
+                Triangle triangle2 = new Triangle(side3, side4, diagonal);
+                return triangle1.area() + triangle2.area();
         }
     }
 

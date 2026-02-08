@@ -1,6 +1,6 @@
-package labotory_10.num1;
+package labotory_10.num2;
 
-public class Nasled3 {
+public class Main {
     public static void main(String[] args) {
         Triangle tr1 = new Triangle();
         Triangle tr2 = new Triangle();
@@ -12,23 +12,21 @@ public class Nasled3 {
         tr2.width = 8.0;
         tr2.height = 12.0;
         tr2.style = "прямоугольный";
-        c.height = 4.0;
         c.width = 2.0;
         r.height = 3.0;
         r.width = 3.2;
         System.out.println("Описание треугольника#1: ");
-        tr1.show1();
         tr1.show2();
         System.out.println("Площадь треугольника = " + tr1.area());
         System.out.println();
         System.out.println("Описание треугольника#2: ");
-        tr2.show1();
         tr2.show2();
         System.out.println("Площадь треугольника = " + tr2.area());
         System.out.println();
         System.out.println("Описание круга: ");
-        c.show1();
         System.out.println("Площадь круга = " + c.area());
+        System.out.println();
+        System.out.println("Периметр круга = " + c.perimeter());
         System.out.println();
         System.out.println("Описание прямоугольника: ");
         r.show1();
