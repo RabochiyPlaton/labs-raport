@@ -46,11 +46,11 @@ public class Main {
                     och.print();
                     break;
                 case 4:
-                    System.out.println("\nСброс очереди...");
+                    System.out.println("\nСброс очереди");
                     och.reset();
                     break;
                 case 5:
-                    System.out.println("\nСохранение очереди...");
+                    System.out.println("\nСохранение очереди");
                     och = Och.save(och, scanner);
                     break;
                 case 6:

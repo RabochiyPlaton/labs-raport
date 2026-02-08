@@ -31,4 +31,3 @@ public class CircularQueue extends AbstractQueue {
         return ch;
     }
 }
-

@@ -1,8 +1,8 @@
 package labotory_10.num5;
 
 public class Figure {
-    private double width;
-    private double height;
+    protected double width;
+    protected double height;
 
     Figure(double w, double h) {
         width = w;
@@ -15,10 +15,6 @@ public class Figure {
 
     public double getWidth() {
         return width;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
     }
 
     public void setWidth(double width) {

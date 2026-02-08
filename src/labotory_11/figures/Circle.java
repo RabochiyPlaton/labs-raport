@@ -1,4 +1,4 @@
-package labotory_11.Abstract.figures;
+package labotory_11.figures;
 
 import labotory_11.input.Input;
 

@@ -1,6 +1,6 @@
-package labotory_11.Abstract;
+package labotory_11;
 
-import labotory_11.Abstract.figures.*;
+import labotory_11.figures.*;
 import labotory_11.input.Input;
 
 public class Main {

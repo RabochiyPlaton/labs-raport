@@ -1,44 +1,40 @@
-package labotory_11.NotAbstract.figures;
+package labotory_11.figures;
 
 import labotory_11.input.Input;
 
+public class Triangle extends Figure {
 
-public class Triangle {
-
-    private final double side1;
-    private final double side2;
-    private final double side3;
-    private final String style;
+    private String style;
 
     public Triangle(double s1) {
-        side2 = side3 = side1 = s1;
+        super(s1);
+        side2 = side3 = side1;
         style = "односторонний";
         if (isExtends()) {
-            throw new IsExtends("Такого треугольника не существует");
+            System.out.println("Такого треугольника не существует");
         }
     }
 
     public Triangle(double s1, double s2) {
-        side3 = side1 = s1;
-        side2 = s2;
+        super(s1,s2);
+        side3 = side1;
         if (isRectangularTriangle()) style = "равнобедренный прямоугольный";
         else style = "равнобедренный";
         if (isExtends()) {
-            throw new IsExtends("Такого треугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Triangle(double s1, double s2, double s3) {
-        side1 = s1;
-        side2 = s2;
-        side3 = s3;
+        super(s1,s2,s3);
         if (isRectangularTriangle()) style = "разносторонний прямоугольный";
         else style = "разносторонний";
         if (isExtends()) {
-            throw new IsExtends("Такого треугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
+    @Override
     public void menu(Input inp) {
         while (true) {
             System.out.println("\n===Меню===");
@@ -60,7 +56,7 @@ public class Triangle {
                     System.out.println("Периметр треугольника = " + perimeter());
                     break;
                 case 4:
-                    if (hypotenuse() == 0)
+                    if (hypotenuse() == -1)
                         System.out.println("Треугольник не является прямоугольным");
                     else
                         System.out.println("Гипотенза треугольника = " + hypotenuse());
@@ -76,15 +72,18 @@ public class Triangle {
         }
     }
 
+    @Override
     protected double area() {
         double p = perimeter() / 2;
         return Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
     }
 
+    @Override
     protected double perimeter() {
         return side1 + side2 + side3;
     }
 
+    @Override
     protected void show() {
         System.out.println("===Треугольник===");
         System.out.println(style);

@@ -1,41 +1,46 @@
-package labotory_11.NotAbstract.figures;
+package labotory_11.figures;
 
 import labotory_11.input.Input;
 
+public class Quadrangle extends Figure {
 
-public class Quadrangle {
-
-    private final double side1;
-    private final double side2;
-    private final double side3;
-    private final double side4;
-    private final String style;
+    private double side4;
+    private String style;
 
     public Quadrangle(double s1) {
-        side2 = side3 = side4 = side1 = s1;
+        super(s1);
+        side2 = side3 = side4 = side1;
         style = "квадрат";
         if (isExists()) {
-            throw new IsExtends("Такого четырехугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Quadrangle(double s1, double s2) {
-        side3 = side1 = s1;
-        side2 = side4 = s2;
+        super(s1,s2);
+        side3 = side1;
+        side4 = side2;
         style = "прямоугольник";
         if (isExists()) {
-            throw new IsExtends("Такого четырехугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
+        }
+    }
+
+    public Quadrangle(double s1, double s2, double s3) {
+        super(s1,s2,s3);
+        side4 = s3;
+        style = "равнобедренная трапеция";
+        if (isExists()) {
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
     public Quadrangle(double s1, double s2, double s3, double s4) {
-        side1 = s1;
-        side2 = s2;
-        side3 = s3;
+        super(s1,s2,s3);
         side4 = s4;
         style = "произвольный четырехугольник";
         if (isExists()) {
-            throw new IsExtends("Такого четырехугольника не существует");
+            System.out.println("Такого четырехугольника не существует");
         }
     }
 
@@ -46,8 +51,10 @@ public class Quadrangle {
         diagonalMax1 = side1 + side2;
         diagonalMin2 = Math.abs(side3 - side4);
         diagonalMax2 = side3 + side4;
-        diagonalMin = Math.max(diagonalMin1, diagonalMin2);
-        diagonalMax = Math.min(diagonalMax1, diagonalMax2);
+        if (diagonalMin1 < diagonalMin2) diagonalMin = diagonalMin1;
+        else diagonalMin = diagonalMin2;
+        if (diagonalMax1 > diagonalMax2) diagonalMax = diagonalMax1;
+        else diagonalMax = diagonalMax2;
         while (true) {
             System.out.printf("Введите диагональ (возможной диапазон: %.3f < %.3f)", diagonalMin, diagonalMax);
             diagonal = inp.inputPositiveNumber();
@@ -58,6 +65,7 @@ public class Quadrangle {
         return diagonal;
     }
 
+    @Override
     protected double area() {
         if (style.equals("квадрат")) {
             return side1 * side1;
@@ -71,16 +79,19 @@ public class Quadrangle {
         }
     }
 
+    @Override
     protected double perimeter() {
         return side1 + side2 + side3 + side4;
     }
 
+    @Override
     protected void show() {
         System.out.println("===Четырехугольник===");
         System.out.println(style);
         System.out.println("Стороны: " + side1 + "; " + side2 + "; " + side3 + "; " + side4);
     }
 
+    @Override
     public void menu(Input inp) {
         while (true) {
             System.out.println("\n===Меню===");

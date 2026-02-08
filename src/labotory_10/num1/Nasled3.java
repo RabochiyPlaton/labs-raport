@@ -13,8 +13,7 @@ public class Nasled3 {
         tr2.height = 12.0;
         tr2.style = "прямоугольный";
         c.height = 4.0;
-        c.width = 4.0;
-        c.radius = 2.0;
+        c.width = 2.0;
         r.height = 3.0;
         r.width = 3.2;
         System.out.println("Описание треугольника#1: ");
@@ -36,6 +35,3 @@ public class Nasled3 {
         System.out.println("Площадь прямоугольника = " + r.area());
     }
 }
-//наслед1 - родитель
-//наслед2 - наследник
-//наследник использует поля (ширина и высота) и метод шоу1 родителя

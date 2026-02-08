@@ -1,8 +1,8 @@
 package labotory_10.num3;
 
 public class Figure {
-    private double width;
-    private double height;
+    protected double width;
+    protected double height;
 
     public double getHeight() {
         return height;

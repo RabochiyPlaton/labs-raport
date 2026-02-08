@@ -22,12 +22,13 @@ public class Num1_Manually {
                 title = scanner.nextLine();
                 System.out.println("Введите имя автора: ");
                 author = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Введите дату публикации: ");
                 date = scanner.nextInt();
+                scanner.nextLine();
                 books[i] = new Num1(title,author,date);
             }
             for (int i = 0; i < books.length; i++) {
+                System.out.println("Книга №"+i);
                 books[i].show();
             }
             break;
