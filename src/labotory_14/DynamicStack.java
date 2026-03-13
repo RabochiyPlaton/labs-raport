@@ -23,7 +23,7 @@ public class DynamicStack extends AbstractQueue {
     @Override
     public char get() {
         if (rear == 0) {
-            System.out.print(" Очередь пуста");
+            System.out.print(" Стэк пуст");
             return ' ';
         }
         char ch = queue[--rear];

@@ -4,7 +4,6 @@ public class Circle extends Figure {
 
     Circle(double w) {
         width = w;
-
     }
 
     double area() {

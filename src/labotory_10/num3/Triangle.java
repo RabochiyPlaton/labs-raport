@@ -5,22 +5,22 @@ public class Triangle extends Figure {
     String style;
     double side;
 
-    Triangle(double h, String st) {
+    Triangle(double h) {
         side = width = height = h;
-        style = st;
+        style = "равносторонний треугольник";
     }
 
-    Triangle(double w, double h, String st) {
+    Triangle(double w, double h) {
         width = w;
         height = side =h;
-        style = st;
+        style = "равнобедренный треугольник";
     }
 
-    Triangle(double s, double w, double h, String st) {
+    Triangle(double s, double w, double h) {
         side = s;
         width = w;
         height = h;
-        style = st;
+        style = "разносторонний треугольник";
     }
 
     double area() {

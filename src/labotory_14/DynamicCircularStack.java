@@ -20,7 +20,7 @@ public class DynamicCircularStack extends AbstractQueue {
     @Override
     public char get() {
         if (front == 0) {
-            System.out.print(" Очередь пуста");
+            System.out.print(" Стэк пуст");
             return ' ';
         }
         char ch = queue[--front];

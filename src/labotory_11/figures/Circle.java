@@ -53,6 +53,11 @@ public class Circle extends Figure {
     }
 
     @Override
+    boolean isExists() {
+        return true;
+    }
+
+    @Override
     public void menu(Input inp) {
         while (true) {
             System.out.println("\n===Меню===");

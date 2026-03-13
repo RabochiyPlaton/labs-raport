@@ -7,17 +7,18 @@ public abstract class Figure {
     protected double side1;
     protected double side2;
     protected double side3;
-
+    protected String style;
 
     public Figure(double s1) {
         side1 = s1;
     }
 
-    public Figure(double s1,double s2) {
+    public Figure(double s1, double s2) {
         side1 = s1;
         side2 = s2;
     }
-    public Figure(double s1,double s2, double s3) {
+
+    public Figure(double s1, double s2, double s3) {
         side1 = s1;
         side2 = s2;
         side3 = s3;
@@ -30,4 +31,6 @@ public abstract class Figure {
     abstract double perimeter();
 
     abstract void show();
+
+    abstract boolean isExists();
 }

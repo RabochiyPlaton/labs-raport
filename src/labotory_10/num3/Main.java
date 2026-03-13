@@ -2,9 +2,9 @@ package labotory_10.num3;
 
 public class Main {
     public static void main(String[] args) {
-        Triangle tr1 = new Triangle(2.0,"Односторонний");
-        Triangle tr2 = new Triangle(2.0,2.5,2.3,"Разносторонний");
-        Triangle tr3 = new Triangle(2.5,2.3,"Равнобедренный");
+        Triangle tr1 = new Triangle(2.0);
+        Triangle tr2 = new Triangle(2.0,2.5,2.3);
+        Triangle tr3 = new Triangle(2.5,2.3);
         Circle c = new Circle(2.0);
         Rectangle r = new Rectangle(4.0,2.0);
         System.out.println("Описание треугольника#1: ");

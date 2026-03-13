@@ -15,7 +15,7 @@ public class Main {
         char chPut, ch;
         int choice, size2;
         while (true) {
-            System.out.println("\n1 - добавить элементы\n2 - извлечь элементы\n3 - распечатать весь массив\n4 - сбросить очередь\n5 - сохранить очередь\n6 - выход");
+            System.out.println("\n1 - добавить элементы\n2 - извлечь элементы\n3 - распечатать весь массив\n4 - сбросить\n5 - сохранить\n6 - выход");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -46,11 +46,11 @@ public class Main {
                     och.print();
                     break;
                 case 4:
-                    System.out.println("\nСброс очереди");
+                    System.out.println("\nСброс");
                     och.reset();
                     break;
                 case 5:
-                    System.out.println("\nСохранение очереди");
+                    System.out.println("\nСохранение");
                     och = Och.save(och, scanner);
                     break;
                 case 6:

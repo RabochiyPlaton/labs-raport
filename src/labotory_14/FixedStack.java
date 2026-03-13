@@ -10,7 +10,7 @@ public class FixedStack extends AbstractQueue {
     @Override
     public void put(char ch) {
         if (front == queue.length) {
-            System.out.println("Очередь заполнена");
+            System.out.println("Стэк заполнена");
             return;
         }
         queue[front++] = ch;
@@ -20,7 +20,7 @@ public class FixedStack extends AbstractQueue {
     @Override
     public char get() {
         if (rear == 0) {
-            System.out.print(" Очередь пуста");
+            System.out.print(" Стэк пуст");
             return ' ';
         }
         char ch = queue[--rear];

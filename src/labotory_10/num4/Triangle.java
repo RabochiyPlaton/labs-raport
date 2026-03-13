@@ -2,30 +2,28 @@ package labotory_10.num4;
 
 public class Triangle extends Figure {
 
-    String style;
-    double side;
+    private String style;
 
-    Triangle(double h, String st) {
+    Triangle(double h) {
         super(h);
-        side = height = width;
-        style = st;
+        side3 = side2 = side1;
+        style = "равносторонний треугольник";
     }
 
-    Triangle(double w, double h, String st) {
+    Triangle(double w, double h) {
         super(w, h);
-        side = height;
-        style = st;
+        side3 = side2;
+        style = "равнобедренный треугольник";
     }
 
-    Triangle(double s, double w, double h, String st) {
-        super(s, w);
-        height = h;
-        style = st;
+    Triangle(double s, double w, double h) {
+        super(s, w, h);
+        style = "разносторонний треугольник";
     }
 
     double area() {
-        double p = (height + width + side) / 2;
-        return Math.sqrt(p * (p - height) * (p - width) * (p - side));
+        double p = (side2 + side1 + side3) / 2;
+        return Math.sqrt(p * (p - side2) * (p - side1) * (p - side3));
     }
 
     void show2() {

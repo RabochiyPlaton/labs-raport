@@ -4,33 +4,31 @@ import labotory_11.input.Input;
 
 public class Triangle extends Figure {
 
-    private String style;
-
     public Triangle(double s1) {
         super(s1);
         side2 = side3 = side1;
         style = "односторонний";
-        if (isExtends()) {
+        if (isExists()) {
             System.out.println("Такого треугольника не существует");
         }
     }
 
     public Triangle(double s1, double s2) {
-        super(s1,s2);
+        super(s1, s2);
         side3 = side1;
         if (isRectangularTriangle()) style = "равнобедренный прямоугольный";
         else style = "равнобедренный";
-        if (isExtends()) {
-            System.out.println("Такого четырехугольника не существует");
+        if (isExists()) {
+            System.out.println("Такого треугольника не существует");
         }
     }
 
     public Triangle(double s1, double s2, double s3) {
-        super(s1,s2,s3);
+        super(s1, s2, s3);
         if (isRectangularTriangle()) style = "разносторонний прямоугольный";
         else style = "разносторонний";
-        if (isExtends()) {
-            System.out.println("Такого четырехугольника не существует");
+        if (isExists()) {
+            System.out.println("Такого треугольника не существует");
         }
     }
 
@@ -90,7 +88,8 @@ public class Triangle extends Figure {
         System.out.println("Стороны: " + side1 + "; " + side2 + "; " + side3);
     }
 
-    private boolean isExtends() {
+    @Override
+    boolean isExists() {
         return !((side1 + side2) > side3) || !((side1 + side3) > side2) || !((side2 + side3) > side1);
     }
 

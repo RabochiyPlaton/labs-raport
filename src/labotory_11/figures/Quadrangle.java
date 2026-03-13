@@ -5,7 +5,6 @@ import labotory_11.input.Input;
 public class Quadrangle extends Figure {
 
     private double side4;
-    private String style = "произвольный четырехугольник";
 
     public Quadrangle(double s1) {
         super(s1);
@@ -124,11 +123,7 @@ public class Quadrangle extends Figure {
                     show();
                     break;
                 case 2:
-                    try {
-                        System.out.println("Площадь = " + area());
-                    } catch (UnsupportedOperationException ex) {
-                        System.out.println(ex.getMessage());
-                    }
+                    System.out.println("Площадь = " + area());
                     break;
                 case 3:
                     System.out.println("Периметр = " + perimeter());
@@ -141,7 +136,8 @@ public class Quadrangle extends Figure {
         }
     }
 
-    private boolean isExists() {
+    @Override
+    boolean isExists() {
         return !(side1 < side2 + side3 + side4) ||
                 !(side2 < side1 + side3 + side4) ||
                 !(side3 < side1 + side2 + side4) ||

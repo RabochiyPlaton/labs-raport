@@ -24,7 +24,7 @@ interface Och {
                 newOch.put(ch);
             }
         }
-        System.out.println("Очередь сохранена");
+        System.out.println("Сохранено");
         return newOch;
     }
 
