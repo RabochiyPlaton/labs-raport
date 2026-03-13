@@ -1,8 +1,8 @@
-package labotory_11.figures;
+package labotory_14.figures;
 
 import labotory_11.input.Input;
 
-public abstract class Figure {
+public abstract class Figure implements ExistingObject, Menu{
 
     protected double side1;
     protected double side2;
@@ -24,13 +24,7 @@ public abstract class Figure {
         side3 = s3;
     }
 
-    abstract public void menu(Input inp);
-
     abstract double area();
 
     abstract double perimeter();
-
-    abstract void show();
-
-    abstract boolean isExists();
 }

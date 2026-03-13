@@ -1,4 +1,4 @@
-package labotory_11.figures;
+package labotory_14.figures;
 
 import labotory_11.input.Input;
 
@@ -103,7 +103,7 @@ public class Quadrangle extends Figure {
     }
 
     @Override
-    protected void show() {
+    public void show() {
         System.out.println("===Четырехугольник===");
         System.out.println(style);
         System.out.println("Стороны: " + side1 + "; " + side2 + "; " + side3 + "; " + side4);
@@ -137,7 +137,7 @@ public class Quadrangle extends Figure {
     }
 
     @Override
-    boolean isExists() {
+    public boolean isExists() {
         return !(side1 < side2 + side3 + side4) ||
                 !(side2 < side1 + side3 + side4) ||
                 !(side3 < side1 + side2 + side4) ||

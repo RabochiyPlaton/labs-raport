@@ -1,4 +1,4 @@
-package labotory_11.figures;
+package labotory_14.figures;
 
 import labotory_11.input.Input;
 
@@ -82,14 +82,14 @@ public class Triangle extends Figure {
     }
 
     @Override
-    protected void show() {
+    public void show() {
         System.out.println("===Треугольник===");
         System.out.println(style);
         System.out.println("Стороны: " + side1 + "; " + side2 + "; " + side3);
     }
 
     @Override
-    boolean isExists() {
+    public boolean isExists() {
         return !((side1 + side2) > side3) || !((side1 + side3) > side2) || !((side2 + side3) > side1);
     }
 

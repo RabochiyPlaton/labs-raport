@@ -1,5 +1,7 @@
 package labotory_15;
 
+import labotory_15.Nums.NegativeNumberException;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -14,13 +16,11 @@ public class Input {
                 x = scanner.nextDouble();
                 scanner.nextLine();
                 if (x <= 0) {
-                    System.out.println("Введите число > 0");
-                    continue;
+                    throw new NegativeNumberException("Число должно быть положительное");
                 }
                 return x;
-            }catch (InputMismatchException ex) {
-                System.out.println("Введите число");
-                scanner.nextLine();
+            }catch (InputMismatchException | NegativeNumberException ex) {
+                System.out.println(ex.getMessage());
             }
         }
     }

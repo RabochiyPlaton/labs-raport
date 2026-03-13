@@ -9,9 +9,6 @@ public class Factorial {
             try {
                 System.out.print("Введите положительное число: ");
                 n = (int) input.inputPositiveNumber();
-                if (n < 0) {
-                    throw new NegativeNumberException("Число должно быть положительное");
-                }
                 if (n > 12) {
                     throw new FactorialOverflowException("Максимально допустимое число для расчета факториала int - 12");
                 }

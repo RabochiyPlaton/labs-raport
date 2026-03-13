@@ -1,0 +1,30 @@
+package labotory_15.queue;
+
+public class DynamicCircularStack extends AbstractQueue {
+    DynamicCircularStack(int size) {
+        super(size);
+        style = "Кольцевой-динамический стэк";
+    }
+
+    @Override
+    public void put(char ch) {
+        if (front == queue.length) {
+            char[] t = new char[queue.length * 2];
+            Och.filling(t);
+            for (int i = 0; i < queue.length; i++) t[i] = queue[i];
+            queue = t;
+        }
+        queue[front++] = ch;
+    }
+
+    @Override
+    public char get() {
+        if (front == 0) {
+            System.out.print(" Стэк пуст");
+            return ' ';
+        }
+        char ch = queue[--front];
+        queue[front] = 'Ø';
+        return ch;
+    }
+}

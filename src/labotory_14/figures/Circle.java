@@ -1,4 +1,4 @@
-package labotory_11.figures;
+package labotory_14.figures;
 
 import labotory_11.input.Input;
 
@@ -46,14 +46,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected void show() {
+    public void show() {
         System.out.println("===Круг===");
         System.out.println("Радиус: " + side1);
         System.out.println("Позиция центра: (" + x + "; " + y + ")");
     }
 
     @Override
-    boolean isExists() {
+    public boolean isExists() {
         return true;
     }
 

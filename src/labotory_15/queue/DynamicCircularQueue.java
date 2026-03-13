@@ -1,0 +1,39 @@
+package labotory_15.queue;
+
+public class DynamicCircularQueue extends AbstractQueue {
+
+    DynamicCircularQueue(int size) {
+        super(size);
+        style = "Кольцевая-динамическая очередь";
+    }
+
+    @Override
+    public void put(char ch) {
+        if (count == queue.length) {
+            char[] t = new char[queue.length * 2];
+            Och.filling(t);
+            for (int i = 0; i < count; i++) {
+                t[i] = queue[(rear + i) % queue.length];
+            }
+            queue = t;
+            rear = 0;
+            front = count;
+        }
+        queue[front] = ch;
+        front = (front + 1) % queue.length;
+        count++;
+    }
+
+    @Override
+    public char get() {
+        if (count == 0) {
+            System.out.print(" Очередь пуста");
+            return ' ';
+        }
+        char ch = queue[rear];
+        queue[rear] = 'Ø';
+        rear = (rear + 1) % queue.length;
+        count--;
+        return ch;
+    }
+}

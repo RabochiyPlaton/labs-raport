@@ -1,4 +1,4 @@
-package labotory_11;
+package labotory_14.figures;
 
 import labotory_11.figures.ChooseFigure;
 import labotory_11.input.Input;

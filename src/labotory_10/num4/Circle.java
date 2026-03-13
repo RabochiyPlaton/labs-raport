@@ -7,10 +7,10 @@ public class Circle extends Figure {
     }
 
     double area() {
-        return Math.PI * width * width;
+        return Math.PI * side1 * side1;
     }
 
     double perimeter() {
-        return 2 * Math.PI * width;
+        return 2 * Math.PI * side1;
     }
 }

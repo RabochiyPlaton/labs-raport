@@ -1,0 +1,30 @@
+package labotory_14.queue;
+
+public class FixedStack extends AbstractQueue {
+
+    FixedStack(int size) {
+        super(size);
+        style = "Фиксированный стэк";
+    }
+
+    @Override
+    public void put(char ch) {
+        if (front == queue.length) {
+            System.out.println("Стэк заполнена");
+            return;
+        }
+        queue[front++] = ch;
+        rear = front;
+    }
+
+    @Override
+    public char get() {
+        if (rear == 0) {
+            System.out.print(" Стэк пуст");
+            return ' ';
+        }
+        char ch = queue[--rear];
+        queue[rear] = 'Ø';
+        return ch;
+    }
+}
