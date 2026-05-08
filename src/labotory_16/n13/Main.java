@@ -10,16 +10,21 @@ public class Main {
         int countA = 0;
         int countN = 0;
         int countP = 0;
-        try (BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\Platon\\Desktop\\labs-raport2\\warandpeace.txt"))) {
+        String [] mass;
+        try (BufferedReader bf = new BufferedReader(new FileReader("C:\\Projects\\java\\labs-raport\\warandpeace.txt"))) {
             while ((str = bf.readLine()) != null) {
-                if (str.contains("Андрей")) {
-                    countA++;
-                }
-                if (str.contains("Наташа")) {
-                    countN++;
-                }
-                if (str.contains("Пьер")) {
-                    countP++;
+                str = str.toLowerCase();
+                mass = str.split(" ");
+                for (int i = 0; i < mass.length; i++) {
+                    if (mass[i].contains("андрей")) {
+                        countA++;
+                    }
+                    else if (mass[i].contains("наташа")) {
+                        countN++;
+                    }
+                    else if (mass[i].contains("пьер")) {
+                        countP++;
+                    }
                 }
             }
         } catch (IOException exc) {

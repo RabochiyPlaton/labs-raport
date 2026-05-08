@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String str = "";
+        String str;
         String str2 = "";
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int choice;
@@ -32,7 +32,7 @@ public class Main {
                             System.out.println(str2);
                             break;
                         case 2:
-                            String [] mass = str2.split(" ");
+                            String [] mass = str2.trim().split(" ");
                             for (int i = mass.length; i > 0; i--) {
                                 System.out.print(mass[i-1] + " ");
                             }
