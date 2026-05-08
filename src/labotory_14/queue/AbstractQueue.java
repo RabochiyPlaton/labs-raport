@@ -41,10 +41,4 @@ abstract class AbstractQueue implements Och {
     public int getLength() {
         return queue.length;
     }
-
-    @Override
-    public abstract void put(char ch);
-
-    @Override
-    public abstract char get();
 }

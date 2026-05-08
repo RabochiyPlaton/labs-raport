@@ -1,4 +1,4 @@
-package labotory_15.Nums;
+package labotory_15.nums;
 
 public class FactorialOverflowException extends Exception {
     public FactorialOverflowException(String message) {

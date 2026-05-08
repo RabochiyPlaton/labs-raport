@@ -1,4 +1,4 @@
-package labotory_15.Nums;
+package labotory_15.nums;
 
 import labotory_15.Input;
 

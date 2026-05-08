@@ -9,9 +9,12 @@ public class CircularQueue extends AbstractQueue {
 
     @Override
     public void put(char ch) {
-        if (count == queue.length) {
-            System.out.println("Очередь заполнена");
-            return;
+        try {
+            if (count == queue.length) {
+                throw new OverflowQueue("очередь заполнена");
+            }
+        } catch (OverflowQueue ex) {
+            System.out.println(ex.getMessage());
         }
         queue[front] = ch;
         front = (front + 1) % queue.length;
@@ -20,9 +23,12 @@ public class CircularQueue extends AbstractQueue {
 
     @Override
     public char get() {
-        if (count == 0) {
-            System.out.print(" Очередь пуста");
-            return ' ';
+        try {
+            if (count == 0) {
+                throw new EmptyQueue("очередь пуста");
+            }
+        } catch (EmptyQueue ex) {
+            System.out.println(ex.getMessage());
         }
         char ch = queue[rear];
         queue[rear] = 'Ø';

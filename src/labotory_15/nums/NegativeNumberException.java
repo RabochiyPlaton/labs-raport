@@ -1,4 +1,4 @@
-package labotory_15.Nums;
+package labotory_15.nums;
 
 public class NegativeNumberException extends RuntimeException {
     public NegativeNumberException(String message) {

@@ -1,6 +1,6 @@
 package labotory_15;
 
-import labotory_15.Nums.NegativeNumberException;
+import labotory_15.nums.NegativeNumberException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
