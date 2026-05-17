@@ -16,13 +16,18 @@ public class Main {
         while (true) {
             System.out.println("\n1 - Ввод\n2 - Вывод\n3 - Сортировка\n0 - выход");
             choice = br.read();
-            br.readLine();
+            while(choice == '\n' || choice == '\r') {
+                choice = br.read();
+            }
             switch (choice) {
                 case '1':
                     System.out.println("Введите символы, точку для выхода");
                     while (true) {
                         ch = (char) br.read();
                         br.readLine();
+                        while(ch == '\n' || ch == '\r') {
+                            ch = (char) br.read();
+                        }
                         System.out.println(ch);
                         if (ch == '.') {
                             break;
@@ -39,7 +44,9 @@ public class Main {
                 case '2':
                     System.out.println("\n1 - В строку\n2 - В столбец");
                     choice = br.read();
-                    br.readLine();
+                    while(choice == '\n' || choice == '\r') {
+                        choice = br.read();
+                    }
                     switch (choice) {
                         case '1':
                             for (i = 0; i < mass.length; i++) {
@@ -58,7 +65,9 @@ public class Main {
                 case '3':
                     System.out.println("\n1 - Обратный порядок\n2 - По возрастанию\n3 - По убыванию");
                     choice = br.read();
-                    br.readLine();
+                    while(choice == '\n' || choice == '\r') {
+                        choice = br.read();
+                    }
                     char buff;
                     boolean isSorted = false;
                     switch (choice) {

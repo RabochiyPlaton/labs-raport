@@ -11,7 +11,7 @@ public class Main {
         int countN = 0;
         int countP = 0;
         String [] mass;
-        try (BufferedReader bf = new BufferedReader(new FileReader("C:\\Projects\\java\\labs-raport\\warandpeace.txt"))) {
+        try (BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\Platon\\Desktop\\labs-raport2\\warandpeace.txt"))) {
             while ((str = bf.readLine()) != null) {
                 str = str.toLowerCase();
                 mass = str.split(" ");

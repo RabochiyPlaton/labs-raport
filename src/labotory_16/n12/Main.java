@@ -1,6 +1,7 @@
 package labotory_16.n12;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -65,8 +66,11 @@ public class Main {
                         for (int i = 0; i < raf1.length(); i++) {
                             raf1.seek(i);
                             raf2.seek(i);
-                            if (raf1.read() != raf2.read()) {
+                            String str1 = raf1.readLine().toLowerCase();
+                            String str2 = raf2.readLine().toLowerCase();
+                            if (!str1.equals(str2)) {
                                 equal = false;
+                                pw.println("Место несовпадения - " + i + " -ый бит");
                                 break;
                             }
                         }
@@ -106,6 +110,7 @@ public class Main {
                         raf.seek(0);
                         String line;
                         while ((line = raf.readLine()) != null) {
+                            line = new String(line.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
                             pw.println(line);
                         }
                     } catch (FileNotFoundException exc) {

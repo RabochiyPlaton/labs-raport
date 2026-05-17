@@ -12,9 +12,12 @@ public class Main {
         int choice;
         while (true) {
             System.out.println("\n1 - Ввод\n2 - Вывод\n0 - выход");
-            choice = Integer.parseInt(br.readLine());
+            choice = br.read();
+            while(choice == '\n' || choice == '\r') {
+                choice = br.read();
+            }
             switch (choice) {
-                case 1:
+                case '1':
                     System.out.println("Введите текст (введите stop чтобы выйти)");
                     do {
                         str = br.readLine();
@@ -24,14 +27,17 @@ public class Main {
                         }
                     }while (!str.equals("stop"));
                     break;
-                case 2:
+                case '2':
                     System.out.println("\n1 - Прямой порядок\n2 - Обратный порядок");
-                    choice = Integer.parseInt(br.readLine());
+                    choice = br.read();
+                    while(choice == '\n' || choice == '\r') {
+                        choice = br.read();
+                    }
                     switch (choice) {
-                        case 1:
+                        case '1':
                             System.out.println(str2);
                             break;
-                        case 2:
+                        case '2':
                             String [] mass = str2.trim().split(" ");
                             for (int i = mass.length; i > 0; i--) {
                                 System.out.print(mass[i-1] + " ");
@@ -41,7 +47,7 @@ public class Main {
                             System.out.println("Нет такого варианта");;
                     }
                     break;
-                case 0:
+                case '0':
                     return;
                 default:
                     System.out.println("Нет такого варианта");
